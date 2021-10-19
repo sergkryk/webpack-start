@@ -1,1 +1,1 @@
-console.log('Test');
+console.log(`Current date is ${new Date().toString()}`);

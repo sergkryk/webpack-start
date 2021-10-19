@@ -20,7 +20,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack Start Template',
-      template: path.resolve(__dirname, 'src/index.html'),
     })
     ],
 };
