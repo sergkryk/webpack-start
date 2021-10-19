@@ -1,0 +1,19 @@
+{
+  "name": "webpack-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergkryk/webpack-start.git"
+  },
+  "author": "sergkryk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergkryk/webpack-start/issues"
+  },
+  "homepage": "https://github.com/sergkryk/webpack-start#readme"
+}
