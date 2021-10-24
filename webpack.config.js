@@ -2,8 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// const devMode = process.env.NODE_ENV !== "production";
-
 let mode = 'development';
 process.env.NODE_ENV === 'production' ? mode = 'production' : '';
 
@@ -39,23 +37,6 @@ module.exports = {
         use: [`html-loader`]
       },
       {
-        test: /\.(png|svg|jpe?g|gif)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'img/[hash][ext]'
-        },
-      },
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      },
-      {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -70,6 +51,23 @@ module.exports = {
         generator: {
           filename: 'fonts/[name][ext]'
         },
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif|webp)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[hash][ext]'
+        },
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
     ]
   }
