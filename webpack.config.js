@@ -2,8 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-let mode = 'development';
-process.env.NODE_ENV === 'production' ? mode = 'production' : '';
+let mode = '';
+const isDev = process.env.NODE_ENV !== 'production';
+isDev ? mode = 'development' : mode = 'production';
 
 module.exports = {
   mode: mode,
