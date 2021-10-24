@@ -1,23 +1,14 @@
 {
-  "name": "webpack-start",
-  "version": "1.0.0",
   "private": true,
-  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve",
-    "build": "webpack"
+    "start": "webpack serve",
+    "build": "NODE_ENV=production webpack",
+    "build-dev": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sergkryk/webpack-start.git"
   },
-  "author": "sergkryk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sergkryk/webpack-start/issues"
-  },
-  "homepage": "https://github.com/sergkryk/webpack-start#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",

@@ -1,5 +1,5 @@
 function printMessage() {
-    console.log('check babel');
+    console.log('check babel first');
 }
 
 export default printMessage;
