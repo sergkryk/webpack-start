@@ -14,8 +14,8 @@ module.exports = {
     main: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'js/bundle.js',
     clean: true,
   },
   devServer: {
@@ -25,13 +25,26 @@ module.exports = {
     port: 9000,
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css'
+    }),
     new HtmlWebpackPlugin({
-      title: 'Webpack Start Template',
+      template: './src/index.html',
     })
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: [`html-loader`]
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[hash][ext]'
+        },
+      },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -50,6 +63,13 @@ module.exports = {
           "postcss-loader",
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        },
       },
     ]
   }

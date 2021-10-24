@@ -23,7 +23,8 @@ body {
   color: $color-default-black;
 
   background-color: $color-default-white;
-  background-color: var(--bcg-color);
+
+  background-image: url('../img/content/placeholder.jpg');
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
