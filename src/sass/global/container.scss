@@ -1,0 +1,16 @@
+.container {
+  max-width: 100%;
+  padding: 0 10rem;
+
+  @include viewport--xxxl {
+    padding: 0 size(160px);
+  }
+
+  @include viewport--xl {
+    padding: 0 size(160px);
+  }
+
+  @include viewport--sm {
+    padding: 0 size(25px);
+  }
+}

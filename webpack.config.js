@@ -1,5 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+// const devMode = process.env.NODE_ENV !== "production";
 
 let mode = 'development';
 process.env.NODE_ENV === 'production' ? mode = 'production' : '';
@@ -22,6 +25,7 @@ module.exports = {
     port: 9000,
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       title: 'Webpack Start Template',
     })
@@ -37,7 +41,15 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ],
+      },
     ]
   }
 };

@@ -1,0 +1,47 @@
+:root {
+    --bcg-color: purple;
+}
+// Colors
+//---------------------------------
+// https://www.htmlcsscolor.com/hex/334482
+
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+$color-fire-brick:                #b22222;
+$color-white-smoke:               #f2f2f2;
+$color-pink-swan:                 #b2b2b2;
+
+// Base
+
+
+// Typography
+//---------------------------------
+
+$font-family--mont:               "Mont", "Arial", sans-serif;
+
+// Animation
+//---------------------------------
+
+$transition-base:                 0.3s ease;
+$transition-modal:                0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$transition-custom:               cubic-bezier(0.19, 1, 0.22, 1);
+
+// Viewports
+//---------------------------------
+
+$viewport--xs:                    320px;
+$viewport--sm:                    375px;
+$viewport--md:                    768px;
+$viewport--lg:                    1024px;
+$viewport--xl:                    1200px;
+$viewport--xxl:                   1600px;
+$viewport--xxxl:                  1920px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                      144dpi;
+$retina-dppx:                     1.5dppx;
